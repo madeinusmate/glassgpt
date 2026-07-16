@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>GlassGPT</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>$(APP_LINK_URL_SCHEME)</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fb-viewapp</string>
+		<string>fb-viewapp-deeplink</string>
+		<string>meta-view</string>
+	</array>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>MWDAT</key>
+	<dict>
+		<key>AppLinkURLScheme</key>
+		<string>$(APP_LINK_URL_SCHEME)://</string>
+		<key>ClientToken</key>
+		<string>$(CLIENT_TOKEN)</string>
+		<key>DAMEnabled</key>
+		<false/>
+		<key>MetaAppID</key>
+		<string>$(META_APP_ID)</string>
+		<key>TeamID</key>
+		<string>$(DEVELOPMENT_TEAM)</string>
+	</dict>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>GlassGPT connects to your Meta Ray-Ban glasses via Bluetooth.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>GlassGPT connects to your Meta Ray-Ban glasses via Bluetooth.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>GlassGPT streams live video from your Meta Ray-Ban glasses camera.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>GlassGPT uses the Meta Ray-Ban glasses microphone for live conversations with GlassGPT.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>GlassGPT can share your current location with the assistant when you enable location sharing in Settings.</string>
+	<key>NSRemindersFullAccessUsageDescription</key>
+	<string>GlassGPT creates reminders only when you explicitly ask and confirm.</string>
+	<key>NSCalendarsWriteOnlyAccessUsageDescription</key>
+	<string>GlassGPT creates calendar events only when you explicitly ask and confirm.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>GlassGPT searches contacts only when you ask it to call someone.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>GlassGPT can notify you when you arrive at a place for an arrival reminder you create.</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>GlassGPT plays Apple Music only when you explicitly ask and confirm.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>GlassGPT saves a glasses photo to your library only when you explicitly ask and confirm.</string>
+	<key>NSSupportsLiveActivities</key>
+	<true/>
+	<key>OPENAI_API_KEY</key>
+	<string>$(OPENAI_API_KEY)</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+		<string>bluetooth-central</string>
+		<string>bluetooth-peripheral</string>
+		<string>external-accessory</string>
+		<string>location</string>
+	</array>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string>LaunchBackground</string>
+	</dict>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedExternalAccessoryProtocols</key>
+	<array>
+		<string>com.meta.ar.wearable</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+</dict>
+</plist>

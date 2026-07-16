@@ -1,0 +1,783 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04288CCA3CE7048F4C09A026 /* BootstrapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F783CBE318098927D1A0BE50 /* BootstrapView.swift */; };
+		1046C9AC3A746053BF92ACF8 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AA4C6E233F5062040C4569 /* MainTabView.swift */; };
+		11C3EB66DAA68E2DFB7BBA3B /* GlassGPTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322D87AE5011BB818AC9390C /* GlassGPTApp.swift */; };
+		19859265495EF5784C0D7AA7 /* CameraStreamManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9365CD60AC0CC46EBF2546 /* CameraStreamManager.swift */; };
+		1FCD0F7DFB8829B35EDB2471 /* LogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A4462FECCE30ADCCEBD4B /* LogEntry.swift */; };
+		38AD1907E51AB63903CC4DCE /* NativeActionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F414835E8D0F30BCE9D6175 /* NativeActionsManager.swift */; };
+		4492FA05117CE235CA5B47F1 /* GlassGPTActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A2F5A3BCC88433DCACF5E /* GlassGPTActivityAttributes.swift */; };
+		4F083BBE1D7438F2E50626E5 /* LiveActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E498F61029BE452A9EB3AB /* LiveActivityManager.swift */; };
+		50124AE197E5F18BD8A658D0 /* StreamRecoveryAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3518DDE938B3B5A37584BF /* StreamRecoveryAction.swift */; };
+		58A79451DA04135EDF750596 /* WearablesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62BA321B652A32B9A50BD77 /* WearablesManager.swift */; };
+		6918978F42DF969BF4662B48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6AE057CECFAA18D99E2D8 /* AppDelegate.swift */; };
+		7D6BE79B27FDBF8AAA477122 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73641AC4DAE10562ED3A5FCD /* HomeView.swift */; };
+		7F2F63B2DF42C7EB132FE1D5 /* SiriMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AC44F8F1294D6E826F47D8 /* SiriMetalView.swift */; };
+		8106DF8B6AE9D912AA2871C1 /* MWDATCamera in Frameworks */ = {isa = PBXBuildFile; productRef = 46B507AB462F909C23247B76 /* MWDATCamera */; };
+		866352E8C516FD362A44152E /* SiriShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9066403FDD66960930A27179 /* SiriShaders.metal */; };
+		8FDD720B3D371DA517FB7363 /* GlassGPTLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F3C5CF9C33BE860CCBD4DC /* GlassGPTLiveActivity.swift */; };
+		97035BB644D7E5A404CB26A6 /* RealtimeConversationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FD2573B04E8BC00D463D9B /* RealtimeConversationManager.swift */; };
+		9AF426BA0DF826923468B97C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0449FC7B04011A269E2F10 /* SettingsView.swift */; };
+		C05F5D9389AD7423A7228A00 /* MWDATCore in Frameworks */ = {isa = PBXBuildFile; productRef = 90D892A101AE9B74FD137BF9 /* MWDATCore */; };
+		C8B1B3928DFAD1CB1B42681F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E9FBFE708BBAAA62572776 /* Assets.xcassets */; };
+		CC25C6EBFD9DC43D4E158652 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7889392332040F220D3DF9 /* SplashView.swift */; };
+		CCBD15E6DD25215F8889762E /* GlassGPTActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A2F5A3BCC88433DCACF5E /* GlassGPTActivityAttributes.swift */; };
+		E2444766F1B60B032561A95E /* MetaAIAppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D9492A09ABA59E8C095575 /* MetaAIAppLauncher.swift */; };
+		E508FAFCE2A145B1FD9BD1BA /* GlassGPTWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EC7DF1EEADBE819ACDF20D9D /* GlassGPTWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		ED164C590EF4202A534B6BFD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62DFD3F5C7CA1D85294862F /* LocationManager.swift */; };
+		EF7D1BB0310C1E80049AD3FA /* EventLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80DDB53317533AA6CA93122 /* EventLogView.swift */; };
+		F26AA6C65DC30A8AAD0BC1C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64FC59D00E9D15D5285072D9 /* Assets.xcassets */; };
+		FF58C99B784987855E2F27BB /* RealtimeSupportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F7D5D2C599B8F95069244E /* RealtimeSupportTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		25C2B7914A415E5E2CE0360B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E00EE2C596D3193EBB365FE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5422EFE02AAB3E2B629778E8;
+			remoteInfo = GlassGPT;
+		};
+		5E66282C5600640A9E7BA679 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E00EE2C596D3193EBB365FE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D6AF554E02C30793D500625;
+			remoteInfo = GlassGPTWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A439B4B6D23C184DD259A001 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E508FAFCE2A145B1FD9BD1BA /* GlassGPTWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1B7889392332040F220D3DF9 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		22F3C5CF9C33BE860CCBD4DC /* GlassGPTLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassGPTLiveActivity.swift; sourceTree = "<group>"; };
+		29F7D5D2C599B8F95069244E /* RealtimeSupportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeSupportTests.swift; sourceTree = "<group>"; };
+		2FA3FD8508C9A45FD1A471E5 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		322D87AE5011BB818AC9390C /* GlassGPTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassGPTApp.swift; sourceTree = "<group>"; };
+		5C6A2F5A3BCC88433DCACF5E /* GlassGPTActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassGPTActivityAttributes.swift; sourceTree = "<group>"; };
+		5D4A4462FECCE30ADCCEBD4B /* LogEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntry.swift; sourceTree = "<group>"; };
+		64FC59D00E9D15D5285072D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6F414835E8D0F30BCE9D6175 /* NativeActionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeActionsManager.swift; sourceTree = "<group>"; };
+		73641AC4DAE10562ED3A5FCD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		75AC44F8F1294D6E826F47D8 /* SiriMetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriMetalView.swift; sourceTree = "<group>"; };
+		78E9FBFE708BBAAA62572776 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7B9365CD60AC0CC46EBF2546 /* CameraStreamManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraStreamManager.swift; sourceTree = "<group>"; };
+		7F0449FC7B04011A269E2F10 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		82C6AE057CECFAA18D99E2D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84E498F61029BE452A9EB3AB /* LiveActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>"; };
+		88D9492A09ABA59E8C095575 /* MetaAIAppLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaAIAppLauncher.swift; sourceTree = "<group>"; };
+		9066403FDD66960930A27179 /* SiriShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = SiriShaders.metal; sourceTree = "<group>"; };
+		97FD2573B04E8BC00D463D9B /* RealtimeConversationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeConversationManager.swift; sourceTree = "<group>"; };
+		984CB13BA352D883A1A5ED63 /* GlassGPT.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = GlassGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A282455762C830A21C1162D5 /* GlassGPTTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = GlassGPTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5F717E5C9CFE0A7106B2B47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C62DFD3F5C7CA1D85294862F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		C80DDB53317533AA6CA93122 /* EventLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLogView.swift; sourceTree = "<group>"; };
+		CA3518DDE938B3B5A37584BF /* StreamRecoveryAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamRecoveryAction.swift; sourceTree = "<group>"; };
+		D5AA4C6E233F5062040C4569 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		E62BA321B652A32B9A50BD77 /* WearablesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WearablesManager.swift; sourceTree = "<group>"; };
+		EC7DF1EEADBE819ACDF20D9D /* GlassGPTWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = GlassGPTWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F783CBE318098927D1A0BE50 /* BootstrapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C05B244DD48A7699B58FF42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C05F5D9389AD7423A7228A00 /* MWDATCore in Frameworks */,
+				8106DF8B6AE9D912AA2871C1 /* MWDATCamera in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		039D91557BB3B2BAC07F16AB = {
+			isa = PBXGroup;
+			children = (
+				0CE47CAC572B127E14E2C77F /* GlassGPT */,
+				1AFF7401F45FE7D94971CFF3 /* glassgpt */,
+				52B59833434FDB0B4423A3A2 /* GlassGPTTests */,
+				53E2669B60217AA2E4C74A7A /* GlassGPTWidget */,
+				16A77B53031CA0BB69A12B10 /* Shared */,
+				C240C1338553B9F0DD3DCFBD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		058730DD14D31F6DC9585411 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				88D9492A09ABA59E8C095575 /* MetaAIAppLauncher.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		0CE47CAC572B127E14E2C77F /* GlassGPT */ = {
+			isa = PBXGroup;
+			children = (
+				5C72D42E91E1FCA5FF2C86AB /* App */,
+				86A773225B482511FF827AFB /* Managers */,
+				881C6056F5BC458A6DD89E47 /* Models */,
+				FEA8238C0F4A3EDE9AF00DA9 /* Resources */,
+				E2B61F5886C89EB90D2E0B14 /* Services */,
+				058730DD14D31F6DC9585411 /* Utilities */,
+				32CF9DA94258F90097476E65 /* Views */,
+			);
+			path = GlassGPT;
+			sourceTree = "<group>";
+		};
+		16A77B53031CA0BB69A12B10 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				5C6A2F5A3BCC88433DCACF5E /* GlassGPTActivityAttributes.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		1AFF7401F45FE7D94971CFF3 /* glassgpt */ = {
+			isa = PBXGroup;
+			children = (
+				2FA3FD8508C9A45FD1A471E5 /* Config.xcconfig */,
+			);
+			name = glassgpt;
+			path = .;
+			sourceTree = "<group>";
+		};
+		32CF9DA94258F90097476E65 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B045B9121E9EA7C330F41D77 /* Components */,
+				F783CBE318098927D1A0BE50 /* BootstrapView.swift */,
+				73641AC4DAE10562ED3A5FCD /* HomeView.swift */,
+				D5AA4C6E233F5062040C4569 /* MainTabView.swift */,
+				7F0449FC7B04011A269E2F10 /* SettingsView.swift */,
+				75AC44F8F1294D6E826F47D8 /* SiriMetalView.swift */,
+				9066403FDD66960930A27179 /* SiriShaders.metal */,
+				1B7889392332040F220D3DF9 /* SplashView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52B59833434FDB0B4423A3A2 /* GlassGPTTests */ = {
+			isa = PBXGroup;
+			children = (
+				29F7D5D2C599B8F95069244E /* RealtimeSupportTests.swift */,
+			);
+			path = GlassGPTTests;
+			sourceTree = "<group>";
+		};
+		53E2669B60217AA2E4C74A7A /* GlassGPTWidget */ = {
+			isa = PBXGroup;
+			children = (
+				64FC59D00E9D15D5285072D9 /* Assets.xcassets */,
+				22F3C5CF9C33BE860CCBD4DC /* GlassGPTLiveActivity.swift */,
+			);
+			path = GlassGPTWidget;
+			sourceTree = "<group>";
+		};
+		5C72D42E91E1FCA5FF2C86AB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				82C6AE057CECFAA18D99E2D8 /* AppDelegate.swift */,
+				322D87AE5011BB818AC9390C /* GlassGPTApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		86A773225B482511FF827AFB /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7B9365CD60AC0CC46EBF2546 /* CameraStreamManager.swift */,
+				84E498F61029BE452A9EB3AB /* LiveActivityManager.swift */,
+				C62DFD3F5C7CA1D85294862F /* LocationManager.swift */,
+				6F414835E8D0F30BCE9D6175 /* NativeActionsManager.swift */,
+				97FD2573B04E8BC00D463D9B /* RealtimeConversationManager.swift */,
+				E62BA321B652A32B9A50BD77 /* WearablesManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		881C6056F5BC458A6DD89E47 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5D4A4462FECCE30ADCCEBD4B /* LogEntry.swift */,
+				CA3518DDE938B3B5A37584BF /* StreamRecoveryAction.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B045B9121E9EA7C330F41D77 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C80DDB53317533AA6CA93122 /* EventLogView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C240C1338553B9F0DD3DCFBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				984CB13BA352D883A1A5ED63 /* GlassGPT.app */,
+				A282455762C830A21C1162D5 /* GlassGPTTests.xctest */,
+				EC7DF1EEADBE819ACDF20D9D /* GlassGPTWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2B61F5886C89EB90D2E0B14 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FEA8238C0F4A3EDE9AF00DA9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				78E9FBFE708BBAAA62572776 /* Assets.xcassets */,
+				B5F717E5C9CFE0A7106B2B47 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5422EFE02AAB3E2B629778E8 /* GlassGPT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDC90A5076765E344073BBB3 /* Build configuration list for PBXNativeTarget "GlassGPT" */;
+			buildPhases = (
+				9EFE56733E1D8707F6E2FA8E /* Check Config Files */,
+				1F8147E5005F96A5305732EE /* Sources */,
+				01B67EB559BF1FA332D482EA /* Resources */,
+				4C05B244DD48A7699B58FF42 /* Frameworks */,
+				A439B4B6D23C184DD259A001 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B994D02F7BFB670DA9C3289B /* PBXTargetDependency */,
+			);
+			name = GlassGPT;
+			packageProductDependencies = (
+				90D892A101AE9B74FD137BF9 /* MWDATCore */,
+				46B507AB462F909C23247B76 /* MWDATCamera */,
+			);
+			productName = GlassGPT;
+			productReference = 984CB13BA352D883A1A5ED63 /* GlassGPT.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7D6AF554E02C30793D500625 /* GlassGPTWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4934FB01F4A09F4D0279CE8B /* Build configuration list for PBXNativeTarget "GlassGPTWidget" */;
+			buildPhases = (
+				009637C59DCC08E9848B78FB /* Sources */,
+				944C984113A6192314EB0709 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GlassGPTWidget;
+			packageProductDependencies = (
+			);
+			productName = GlassGPTWidget;
+			productReference = EC7DF1EEADBE819ACDF20D9D /* GlassGPTWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		A8D74A441D7E1188E4D3DFB0 /* GlassGPTTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 337ACE07D19DC73C7D0BAF52 /* Build configuration list for PBXNativeTarget "GlassGPTTests" */;
+			buildPhases = (
+				1B3F560AD10C19B2052179C7 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6607872E908D8E618888770E /* PBXTargetDependency */,
+			);
+			name = GlassGPTTests;
+			packageProductDependencies = (
+			);
+			productName = GlassGPTTests;
+			productReference = A282455762C830A21C1162D5 /* GlassGPTTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E00EE2C596D3193EBB365FE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					5422EFE02AAB3E2B629778E8 = {
+						DevelopmentTeam = "${DEVELOPMENT_TEAM}";
+						ProvisioningStyle = Automatic;
+					};
+					7D6AF554E02C30793D500625 = {
+						DevelopmentTeam = U5FHQCWR8L;
+						ProvisioningStyle = Automatic;
+					};
+					A8D74A441D7E1188E4D3DFB0 = {
+						DevelopmentTeam = "${DEVELOPMENT_TEAM}";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 614CF4D92C882FA87D38C5F3 /* Build configuration list for PBXProject "GlassGPT" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 039D91557BB3B2BAC07F16AB;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				902360D04C9052AE7B9854F0 /* XCRemoteSwiftPackageReference "meta-wearables-dat-ios" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C240C1338553B9F0DD3DCFBD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5422EFE02AAB3E2B629778E8 /* GlassGPT */,
+				A8D74A441D7E1188E4D3DFB0 /* GlassGPTTests */,
+				7D6AF554E02C30793D500625 /* GlassGPTWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01B67EB559BF1FA332D482EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8B1B3928DFAD1CB1B42681F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		944C984113A6192314EB0709 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F26AA6C65DC30A8AAD0BC1C8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9EFE56733E1D8707F6E2FA8E /* Check Config Files */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Check Config Files";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ ! -f \"${PROJECT_DIR}/Config.xcconfig\" ]; then\n  echo \"error: Config.xcconfig not found. Copy Config.xcconfig.example to Config.xcconfig\"\n  exit 1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		009637C59DCC08E9848B78FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4492FA05117CE235CA5B47F1 /* GlassGPTActivityAttributes.swift in Sources */,
+				8FDD720B3D371DA517FB7363 /* GlassGPTLiveActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B3F560AD10C19B2052179C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF58C99B784987855E2F27BB /* RealtimeSupportTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F8147E5005F96A5305732EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6918978F42DF969BF4662B48 /* AppDelegate.swift in Sources */,
+				04288CCA3CE7048F4C09A026 /* BootstrapView.swift in Sources */,
+				19859265495EF5784C0D7AA7 /* CameraStreamManager.swift in Sources */,
+				EF7D1BB0310C1E80049AD3FA /* EventLogView.swift in Sources */,
+				CCBD15E6DD25215F8889762E /* GlassGPTActivityAttributes.swift in Sources */,
+				11C3EB66DAA68E2DFB7BBA3B /* GlassGPTApp.swift in Sources */,
+				7D6BE79B27FDBF8AAA477122 /* HomeView.swift in Sources */,
+				4F083BBE1D7438F2E50626E5 /* LiveActivityManager.swift in Sources */,
+				ED164C590EF4202A534B6BFD /* LocationManager.swift in Sources */,
+				1FCD0F7DFB8829B35EDB2471 /* LogEntry.swift in Sources */,
+				1046C9AC3A746053BF92ACF8 /* MainTabView.swift in Sources */,
+				E2444766F1B60B032561A95E /* MetaAIAppLauncher.swift in Sources */,
+				38AD1907E51AB63903CC4DCE /* NativeActionsManager.swift in Sources */,
+				97035BB644D7E5A404CB26A6 /* RealtimeConversationManager.swift in Sources */,
+				9AF426BA0DF826923468B97C /* SettingsView.swift in Sources */,
+				7F2F63B2DF42C7EB132FE1D5 /* SiriMetalView.swift in Sources */,
+				866352E8C516FD362A44152E /* SiriShaders.metal in Sources */,
+				CC25C6EBFD9DC43D4E158652 /* SplashView.swift in Sources */,
+				50124AE197E5F18BD8A658D0 /* StreamRecoveryAction.swift in Sources */,
+				58A79451DA04135EDF750596 /* WearablesManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6607872E908D8E618888770E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5422EFE02AAB3E2B629778E8 /* GlassGPT */;
+			targetProxy = 25C2B7914A415E5E2CE0360B /* PBXContainerItemProxy */;
+		};
+		B994D02F7BFB670DA9C3289B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D6AF554E02C30793D500625 /* GlassGPTWidget */;
+			targetProxy = 5E66282C5600640A9E7BA679 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0CC3033DAC23ABBCB7379D56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FA3FD8508C9A45FD1A471E5 /* Config.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = GlassGPTWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(WIDGET_BUNDLE_IDENTIFIER)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2770AF441ECD14C395BA9BB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FA3FD8508C9A45FD1A471E5 /* Config.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = GlassGPTWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(WIDGET_BUNDLE_IDENTIFIER)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2986F48563B36DC315A3FBD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = GlassGPT/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E277ABD19B9BB59DAA1A7B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GlassGPT.app/GlassGPT";
+			};
+			name = Debug;
+		};
+		4A52A9BB1D5442B53BB2B4E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GlassGPT.app/GlassGPT";
+			};
+			name = Release;
+		};
+		64BDDADBACA1BE3EAE57736E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FA3FD8508C9A45FD1A471E5 /* Config.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				APP_LINK_URL_SCHEME = "${APP_LINK_URL_SCHEME}";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CLIENT_TOKEN = "${CLIENT_TOKEN}";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "${DEVELOPMENT_TEAM}";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = GlassGPT/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 0.1.0;
+				META_APP_ID = "${META_APP_ID}";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OPENAI_API_KEY = "${OPENAI_API_KEY}";
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		82140C58F88628B2F1F1A788 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FA3FD8508C9A45FD1A471E5 /* Config.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				APP_LINK_URL_SCHEME = "${APP_LINK_URL_SCHEME}";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CLIENT_TOKEN = "${CLIENT_TOKEN}";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "${DEVELOPMENT_TEAM}";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = GlassGPT/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 0.1.0;
+				META_APP_ID = "${META_APP_ID}";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OPENAI_API_KEY = "${OPENAI_API_KEY}";
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		A442D4DC0E06A13423DBA60B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = GlassGPT/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		337ACE07D19DC73C7D0BAF52 /* Build configuration list for PBXNativeTarget "GlassGPTTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E277ABD19B9BB59DAA1A7B3 /* Debug */,
+				4A52A9BB1D5442B53BB2B4E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4934FB01F4A09F4D0279CE8B /* Build configuration list for PBXNativeTarget "GlassGPTWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2770AF441ECD14C395BA9BB0 /* Debug */,
+				0CC3033DAC23ABBCB7379D56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		614CF4D92C882FA87D38C5F3 /* Build configuration list for PBXProject "GlassGPT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64BDDADBACA1BE3EAE57736E /* Debug */,
+				82140C58F88628B2F1F1A788 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EDC90A5076765E344073BBB3 /* Build configuration list for PBXNativeTarget "GlassGPT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2986F48563B36DC315A3FBD3 /* Debug */,
+				A442D4DC0E06A13423DBA60B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		902360D04C9052AE7B9854F0 /* XCRemoteSwiftPackageReference "meta-wearables-dat-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/meta-wearables-dat-ios";
+			requirement = {
+				kind = exactVersion;
+				version = 0.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		46B507AB462F909C23247B76 /* MWDATCamera */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 902360D04C9052AE7B9854F0 /* XCRemoteSwiftPackageReference "meta-wearables-dat-ios" */;
+			productName = MWDATCamera;
+		};
+		90D892A101AE9B74FD137BF9 /* MWDATCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 902360D04C9052AE7B9854F0 /* XCRemoteSwiftPackageReference "meta-wearables-dat-ios" */;
+			productName = MWDATCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E00EE2C596D3193EBB365FE1 /* Project object */;
+}

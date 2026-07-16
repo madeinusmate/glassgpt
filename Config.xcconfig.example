@@ -1,0 +1,13 @@
+// Copy this file to Config.xcconfig and fill in your values.
+// Config.xcconfig is gitignored — never commit real credentials.
+
+DEVELOPMENT_TEAM = YOUR_TEAM_ID
+PRODUCT_BUNDLE_IDENTIFIER = your-bundle-identifier
+WIDGET_BUNDLE_IDENTIFIER = your-bundle-identifier
+META_APP_ID = 1234567890
+CLIENT_TOKEN = AR|1234567890|your_client_token_here
+APP_LINK_URL_SCHEME = your-link-scjeme
+
+// DEVELOPMENT ONLY: this value is compiled into the app. Never distribute a build
+// using a long-lived OpenAI key; production must mint a short-lived credential server-side.
+OPENAI_API_KEY = YOUR_OPENAI_API_KEY

@@ -1,0 +1,119 @@
+name: GlassGPT
+options:
+  bundleIdPrefix: com.miudigital
+  deploymentTarget:
+    iOS: "26.0"
+  xcodeVersion: "16.0"
+  generateEmptyDirectories: true
+  groupSortPosition: top
+
+settings:
+  base:
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    SWIFT_VERSION: "5.9"
+    DEVELOPMENT_TEAM: ${DEVELOPMENT_TEAM}
+    CODE_SIGN_STYLE: Automatic
+    INFOPLIST_FILE: GlassGPT/Resources/Info.plist
+    PRODUCT_BUNDLE_IDENTIFIER: ${PRODUCT_BUNDLE_IDENTIFIER}
+    META_APP_ID: ${META_APP_ID}
+    CLIENT_TOKEN: ${CLIENT_TOKEN}
+    APP_LINK_URL_SCHEME: ${APP_LINK_URL_SCHEME}
+    OPENAI_API_KEY: ${OPENAI_API_KEY}
+
+configs:
+  Debug:
+    settings:
+      DEBUG_INFORMATION_FORMAT: dwarf-with-dsym
+  Release:
+    settings:
+      DEBUG_INFORMATION_FORMAT: dwarf-with-dsym
+
+configFiles:
+  Debug: Config.xcconfig
+  Release: Config.xcconfig
+
+targets:
+  GlassGPT:
+    type: application
+    platform: iOS
+    sources:
+      - path: GlassGPT
+        excludes:
+          - "**/*.example"
+      - path: Shared
+    resources:
+      - path: GlassGPT/Resources
+        excludes:
+          - "**/*.plist"
+    settings:
+      base:
+        INFOPLIST_FILE: GlassGPT/Resources/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: $(PRODUCT_BUNDLE_IDENTIFIER)
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SUPPORTS_MACCATALYST: false
+        ENABLE_PREVIEWS: true
+    dependencies:
+      - package: meta-wearables-dat-ios
+        products:
+          - MWDATCore
+          - MWDATCamera
+      - target: GlassGPTWidget
+        embed: true
+    preBuildScripts:
+      - name: Check Config Files
+        script: |
+          if [ ! -f "${PROJECT_DIR}/Config.xcconfig" ]; then
+            echo "error: Config.xcconfig not found. Copy Config.xcconfig.example to Config.xcconfig"
+            exit 1
+          fi
+        basedOnDependencyAnalysis: false
+
+  GlassGPTWidget:
+    type: app-extension
+    platform: iOS
+    configFiles:
+      Debug: Config.xcconfig
+      Release: Config.xcconfig
+    sources:
+      - path: GlassGPTWidget
+        excludes:
+          - "Info.plist"
+      - path: Shared
+    settings:
+      base:
+        INFOPLIST_FILE: GlassGPTWidget/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: $(WIDGET_BUNDLE_IDENTIFIER)
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SKIP_INSTALL: YES
+  GlassGPTTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: GlassGPTTests
+    dependencies:
+      - target: GlassGPT
+
+packages:
+  meta-wearables-dat-ios:
+    url: https://github.com/facebook/meta-wearables-dat-ios
+    exactVersion: "0.7.0"
+
+schemes:
+  GlassGPT:
+    build:
+      targets:
+        GlassGPT: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - GlassGPTTests
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release
