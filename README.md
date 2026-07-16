@@ -25,6 +25,16 @@ GlassGPT is a practical reference for building an iPhone-first assistant around 
 
 The project is intentionally useful to contributors who want to learn about SwiftUI, Meta Wearables DAT, OpenAI Realtime, and Apple system frameworks in one place. Contributions that improve accessibility, privacy, reliability, and the quality of these integrations are especially welcome.
 
+## Built with Codex
+
+I collaborated with Codex throughout the project as a hands-on engineering partner, while retaining ownership of the product direction, technical tradeoffs, and final decisions. I used GPT-5.6 and Codex to inspect the existing SwiftUI and Meta Wearables codebase, translate product ideas into implementation plans, implement and refine features, diagnose device logs, and verify iPhone and simulator builds.
+
+Codex accelerated the work most in the integration-heavy parts of the project. It helped build the OpenAI Realtime WebSocket client, configure Bluetooth HFP audio for the glasses, resample the glasses microphone from its 16 kHz hardware format to Realtime PCM, attach a fresh compressed camera frame to vision requests, and implement safe interruption so a new spoken question cancels queued assistant audio. It also helped evolve the iOS-native action layer for reminders, calendar events, Maps, notifications, location, contacts and calling, Apple Music, and Photos, with capability toggles, permissions, validation, and confirmation before actions execute.
+
+I made the key product decisions through rapid testing on real hardware. For example, I chose to prioritize conversational reliability over smooth video by reducing the glasses stream to a low-quality 1 fps feed. I also chose a low-eagerness semantic VAD configuration so the assistant waits for a meaningful end to a sentence while still allowing natural barge-in, and I chose an opt-in permission model for every sensitive iOS capability and for location sharing. On the design side, I directed the single-screen Liquid Glass interface, the audio-responsive speaking animation, the background conversation behavior, and the Live Activity experience for the Lock Screen and Dynamic Island.
+
+GPT-5.6 and Codex contributed to the final result by shortening the loop between idea, implementation, device failure, and correction. They helped interpret Realtime API changes and low-level audio, socket, and Meta streaming errors, then turn those findings into focused Swift changes. The result is a solo-built prototype that combines Meta hardware, OpenAI Realtime, and native iOS capabilities into one cohesive, permission-aware assistant experience.
+
 ## Requirements
 
 | Requirement | Why it is needed |
@@ -140,4 +150,3 @@ Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) for th
 ## License and third-party notices
 
 GlassGPT is released under the [MIT License](LICENSE). Third-party attribution and license notices are collected in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
-
