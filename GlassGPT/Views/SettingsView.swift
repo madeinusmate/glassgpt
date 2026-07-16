@@ -88,7 +88,7 @@ struct SettingsView: View {
                 )
             )
 
-            Text("GlassGPT asks for confirmation before creating a reminder, calendar event, timer, notification, arrival reminder, call, route, music playback, or saving a photo. Permissions are requested only when you tap their buttons.")
+            Text("GlassGPT runs reminders, calendar events, timers, notifications, arrival reminders, calls, routes, music, and photo saves as soon as you ask. Permissions are requested only when you tap their buttons.")
                 .font(.caption)
                 .foregroundStyle(.secondary)
         }

@@ -27,21 +27,26 @@ struct HomeView: View {
                 header
                     .padding(.top, 8)
 
-                Spacer()
+                Spacer(minLength: 0)
 
-                sessionIndicator
+                ZStack {
+                    sessionIndicator
+
+                    if isSessionActive, showChatMessages, hasConversationContent {
+                        conversationBubbles
+                            .frame(maxWidth: .infinity, maxHeight: 300, alignment: .bottom)
+                            .padding(.horizontal, 4)
+                    }
+                }
+                .frame(maxWidth: .infinity)
+                .frame(height: isSessionActive ? 340 : 216)
 
                 if let sessionFailure {
                     sessionFailureView(sessionFailure)
                         .padding(.top, 20)
                 }
 
-                Spacer()
-
-                if isSessionActive, showChatMessages, hasConversationContent {
-                    conversationBubbles
-                        .padding(.bottom, 16)
-                }
+                Spacer(minLength: 0)
 
                 if isSessionActive {
                     sessionControl
@@ -201,26 +206,30 @@ struct HomeView: View {
     }
 
     private var conversationBubbles: some View {
-        VStack(spacing: 8) {
-            if !realtimeConversationManager.currentTranscript.isEmpty {
-                ConversationBubble(
-                    title: "You",
-                    text: realtimeConversationManager.currentTranscript,
-                    imageData: realtimeConversationManager.currentTurnVisionFrameData,
-                    alignment: .trailing
-                )
-            }
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack(spacing: 8) {
+                if !realtimeConversationManager.currentTranscript.isEmpty {
+                    ConversationBubble(
+                        title: "You",
+                        text: realtimeConversationManager.currentTranscript,
+                        imageData: realtimeConversationManager.currentTurnVisionFrameData,
+                        alignment: .trailing
+                    )
+                }
 
-            if !realtimeConversationManager.responseText.isEmpty || realtimeConversationManager.isResponding {
-                ConversationBubble(
-                    title: "GlassGPT",
-                    text: realtimeConversationManager.responseText.isEmpty ? "Thinking…" : realtimeConversationManager.responseText,
-                    imageData: nil,
-                    alignment: .leading
-                )
+                if !realtimeConversationManager.responseText.isEmpty || realtimeConversationManager.isResponding {
+                    ConversationBubble(
+                        title: "GlassGPT",
+                        text: realtimeConversationManager.responseText.isEmpty ? "Thinking…" : realtimeConversationManager.responseText,
+                        imageData: nil,
+                        alignment: .leading
+                    )
+                }
             }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 8)
         }
-        .frame(maxWidth: .infinity)
+        .scrollBounceBehavior(.basedOnSize)
     }
 }
 
@@ -237,7 +246,8 @@ private struct ConversationBubble: View {
                 .foregroundStyle(.secondary)
             Text(text)
                 .font(.footnote)
-                .lineLimit(2)
+                .multilineTextAlignment(alignment == .leading ? .leading : .trailing)
+                .fixedSize(horizontal: false, vertical: true)
             if let imageData, let image = UIImage(data: imageData) {
                 Image(uiImage: image)
                     .resizable()

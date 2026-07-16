@@ -393,7 +393,7 @@ final class NativeActionsManager: NSObject, ObservableObject {
     private static let reminderTool: [String: Any] = [
         "type": "function",
         "name": "create_reminder",
-        "description": "Create a reminder in Apple Reminders. Call only after the user has confirmed the title and due time.",
+        "description": "Create a reminder in Apple Reminders. Call immediately when the user asks to be reminded; infer title and due time from the request.",
         "parameters": [
             "type": "object",
             "properties": [
@@ -409,7 +409,7 @@ final class NativeActionsManager: NSObject, ObservableObject {
     private static let calendarTool: [String: Any] = [
         "type": "function",
         "name": "create_calendar_event",
-        "description": "Create an event in Apple Calendar. Call only after the user has confirmed its title, date, and time.",
+        "description": "Create an event in Apple Calendar. Call immediately when the user asks to schedule something; infer title, date, and time from the request.",
         "parameters": [
             "type": "object",
             "properties": [
@@ -427,7 +427,7 @@ final class NativeActionsManager: NSObject, ObservableObject {
     private static let directionsTool: [String: Any] = [
         "type": "function",
         "name": "open_directions",
-        "description": "Open turn-by-turn directions in Apple Maps. Call only after the user has confirmed the destination.",
+        "description": "Open turn-by-turn directions in Apple Maps. Call immediately when the user asks for directions.",
         "parameters": [
             "type": "object",
             "properties": [
@@ -439,13 +439,13 @@ final class NativeActionsManager: NSObject, ObservableObject {
         ]
     ]
 
-    private static let timerTool: [String: Any] = tool(name: "schedule_timer", description: "Set a GlassGPT timer that sends a local notification. Call only after the user confirms.", properties: ["title": ["type": "string"], "duration_seconds": ["type": "number"]], required: ["title", "duration_seconds"])
-    private static let notificationTool: [String: Any] = tool(name: "schedule_notification", description: "Schedule a local notification. Call only after the user confirms.", properties: ["title": ["type": "string"], "body": ["type": "string"], "due_at": ["type": "string", "description": "ISO-8601 date-time in the user's time zone."]], required: ["title", "due_at"])
-    private static let searchContactsTool: [String: Any] = tool(name: "search_contacts", description: "Find the user's contacts by name before offering a call. Do not call people from search results without confirmation.", properties: ["query": ["type": "string"]], required: ["query"])
-    private static let callContactTool: [String: Any] = tool(name: "call_contact", description: "Open the iPhone call screen for a contact returned by search_contacts. Call only after the user explicitly confirms the exact person.", properties: ["contact_identifier": ["type": "string"]], required: ["contact_identifier"])
-    private static let locationReminderTool: [String: Any] = tool(name: "create_location_reminder", description: "Create an arrival-based local notification around a place. Call only after the user confirms the destination and reminder.", properties: ["title": ["type": "string"], "destination": ["type": "string"], "body": ["type": "string"], "radius_meters": ["type": "number"]], required: ["title", "destination"])
-    private static let playMusicTool: [String: Any] = tool(name: "play_music", description: "Search Apple Music and begin playback. Call only after the user confirms what should play.", properties: ["query": ["type": "string"]], required: ["query"])
-    private static let savePhotoTool: [String: Any] = tool(name: "save_current_photo", description: "Save the current glasses camera view to the user's Photos library. Call only after explicit confirmation.", properties: [:], required: [])
+    private static let timerTool: [String: Any] = tool(name: "schedule_timer", description: "Set a GlassGPT timer that sends a local notification. Call immediately when the user asks for a timer.", properties: ["title": ["type": "string"], "duration_seconds": ["type": "number"]], required: ["title", "duration_seconds"])
+    private static let notificationTool: [String: Any] = tool(name: "schedule_notification", description: "Schedule a local notification. Call immediately when the user asks to be notified.", properties: ["title": ["type": "string"], "body": ["type": "string"], "due_at": ["type": "string", "description": "ISO-8601 date-time in the user's time zone."]], required: ["title", "due_at"])
+    private static let searchContactsTool: [String: Any] = tool(name: "search_contacts", description: "Find the user's contacts by name before calling. Call immediately when the user asks to find or call someone.", properties: ["query": ["type": "string"]], required: ["query"])
+    private static let callContactTool: [String: Any] = tool(name: "call_contact", description: "Open the iPhone call screen for a contact returned by search_contacts. Call immediately once you have a matching contact_identifier.", properties: ["contact_identifier": ["type": "string"]], required: ["contact_identifier"])
+    private static let locationReminderTool: [String: Any] = tool(name: "create_location_reminder", description: "Create an arrival-based local notification around a place. Call immediately when the user asks for an arrival reminder.", properties: ["title": ["type": "string"], "destination": ["type": "string"], "body": ["type": "string"], "radius_meters": ["type": "number"]], required: ["title", "destination"])
+    private static let playMusicTool: [String: Any] = tool(name: "play_music", description: "Search Apple Music and begin playback. Call immediately when the user asks to play something.", properties: ["query": ["type": "string"]], required: ["query"])
+    private static let savePhotoTool: [String: Any] = tool(name: "save_current_photo", description: "Save the current glasses camera view to the user's Photos library. Call immediately when the user asks to save or capture a photo.", properties: [:], required: [])
 
     private static func tool(name: String, description: String, properties: [String: Any], required: [String]) -> [String: Any] {
         ["type": "function", "name": name, "description": description, "parameters": ["type": "object", "properties": properties, "required": required, "additionalProperties": false]]
