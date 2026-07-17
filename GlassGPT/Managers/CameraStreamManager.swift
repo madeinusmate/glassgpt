@@ -169,14 +169,10 @@ final class CameraStreamManager: ObservableObject {
         try await Task.sleep(nanoseconds: 1_500_000_000)
         try throwIfUserRequestedStop()
 
-        // Use the smallest practical continuous visual feed. One raw, low-res
-        // frame per second provides immediate visual context on each turn while
-        // leaving the bulk of Bluetooth capacity for HFP audio.
-        let configs = [
-            StreamConfiguration(videoCodec: .raw, resolution: .low, frameRate: 1),
-            StreamConfiguration(videoCodec: .raw, resolution: .low, frameRate: 1),
-        ]
-        let config = configs[min(max(streamAttemptIndex - 1, 0), configs.count - 1)]
+        // Prefer the highest-quality continuous feed the glasses expose
+        // (720×1280). Keep one frame per second so Bluetooth still has headroom
+        // for HFP audio.
+        let config = StreamConfiguration(videoCodec: .raw, resolution: .high, frameRate: 1)
 
         log(
             "Adding stream capability codec=raw resolution=\(String(describing: config.resolution)) frameRate=\(config.frameRate)",
@@ -198,7 +194,7 @@ final class CameraStreamManager: ObservableObject {
         try throwIfUserRequestedStop()
         isStreaming = true
         streamStateLabel = "Streaming (1 fps)"
-        log("Low-bandwidth live stream ready at one frame per second", category: .stream, to: wearablesManager)
+        log("High-quality live stream ready at one frame per second", category: .stream, to: wearablesManager)
     }
 
     /// Returns a recent preview frame immediately; no camera operation is
@@ -694,22 +690,9 @@ struct CapturedStreamFrame {
     let image: UIImage
     let capturedAt: Date
 
-    func jpegData(maximumDimension: CGFloat = 768, compressionQuality: CGFloat = 0.72) -> Data? {
-        let largestDimension = max(image.size.width, image.size.height)
-        let outputImage: UIImage
-
-        if largestDimension > maximumDimension {
-            let scale = maximumDimension / largestDimension
-            let size = CGSize(width: image.size.width * scale, height: image.size.height * scale)
-            let renderer = UIGraphicsImageRenderer(size: size)
-            outputImage = renderer.image { _ in
-                image.draw(in: CGRect(origin: .zero, size: size))
-            }
-        } else {
-            outputImage = image
-        }
-
-        return outputImage.jpegData(compressionQuality: compressionQuality)
+    /// Lossless PNG at the stream's native resolution — no resize, no JPEG.
+    func pngData() -> Data? {
+        image.pngData()
     }
 }
 
@@ -720,7 +703,7 @@ extension CameraStreamManager {
             return nil
         }
 
-        return latestFrame.jpegData()
+        return latestFrame.pngData()
     }
 }
 

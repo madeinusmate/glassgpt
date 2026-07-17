@@ -7,7 +7,7 @@ final class RealtimeConversationManager: NSObject, ObservableObject {
     @Published private(set) var audioRouteLabel = "Not checked"
     @Published private(set) var errorMessage: String?
     @Published private(set) var currentTranscript = ""
-    /// The exact JPEG attached to the current user turn, if that turn included
+    /// The exact PNG attached to the current user turn, if that turn included
     /// visual context. This is kept only for the compact on-screen transcript.
     @Published private(set) var currentTurnVisionFrameData: Data?
     @Published private(set) var responseText = ""
@@ -482,13 +482,13 @@ final class RealtimeConversationManager: NSObject, ObservableObject {
 
         if TurnImagePolicy.shouldCaptureImage(for: transcript),
            let imageData = cameraStreamManager?.latestLiveFrameData() {
-            // Retain the already-compressed payload rather than extracting a
-            // second frame. The UI therefore previews precisely what Realtime
-            // receives for this turn.
+            // Retain the exact payload rather than extracting a second frame.
+            // The UI therefore previews precisely what Realtime receives for this turn.
             currentTurnVisionFrameData = imageData
             content.append([
                 "type": "input_image",
-                "image_url": "data:image/jpeg;base64,\(imageData.base64EncodedString())"
+                "image_url": "data:image/png;base64,\(imageData.base64EncodedString())",
+                "detail": "high"
             ])
             log("Attached the latest 1 fps live-stream frame for this turn", category: .vision)
         } else {
